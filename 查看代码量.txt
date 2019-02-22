@@ -1,0 +1,6 @@
+git log -- since=="2019-02-21 09:00:00"--until=="2019-02-21 12:00:00 | wc -l"
+
+git log -- since=="2019-02-21 09:00:00"--until=="2019-02-21 12:00:00 ¡° --numstat | awk '{add += $1;subs+=$2;loc+=$1-$2} END {printf "added lines $s-----subbed line %s-----total lines %s",add,subs,loc}'
+
+
+git log --numstat | awk '{add += $1;} END {printf "added line = %s",add}'
